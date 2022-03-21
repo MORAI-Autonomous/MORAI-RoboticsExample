@@ -1,0 +1,13 @@
+<launch>
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ogm)/rviz/rviz.rviz"/>
+    
+    <node name="tf_pub" pkg="ogm" type="tf_publisher.py"/>
+    <node name="mapping" pkg="ogm" type="grid_mapping.py" output="screen">
+        <rosparam command="load" file="$(find ogm)/config/config.yaml" />
+    </node>
+
+</launch>
+

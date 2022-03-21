@@ -1,0 +1,55 @@
+common:
+    pointCloudTopic: "/velodyne_points" #ouster: "/os1_points"
+    loopClosureEnableFlag: true
+    mappingProcessInterval: 0.3
+
+pcd_save:
+    fileDirectory: "/tmp/"
+    
+laser:
+     #Using velodyne cloud "ring" channel for image projection (other lidar may have different name for this channel, change "PointXYZIR" below)
+    useCloudRing: false  #if true, ang_res_y and ang_bottom are not used
+ 
+    #VLP-16
+    N_SCAN: 16
+    Horizon_SCAN: 1800
+    ang_res_x: 0.2 # horizontal angular resolution
+    ang_res_y: 2.0 # vertical angular resolution
+    ang_bottom: -15.0
+    groundScanInd: 7
+
+imageProjection:
+    sensorMinimumRange: 1.0
+    sensorMountAngle: 0.0
+    segmentTheta: 60.0   # decrese this value may improve accuracy
+    segmentValidPointNum: 5
+    segmentValidLineNum: 3
+
+featureAssociation:
+    edgeFeatureNum: 2
+    surfFeatureNum: 4
+    sectionsTotal: 6
+    edgeThreshold: 0.1
+    surfThreshold: 0.1
+    nearestFeatureSearchSqDist: 25
+
+mapOptimization:
+    surroundingKeyframeSearchRadius: 50.0 # key frame that is within n meters from current pose will be considerd for scan-to-map optimization (when loop closure disabled)
+    surroundingKeyframeSearchNum: 50 # submap size (when loop closure enabled)
+
+    #history key frames (history submap for loop closure)
+    historyKeyframeSearchRadius: 20.0 # NOT used in Scan Context-based loop detector # default 7.0 # key frame that is within n meters from current pose will be considerd for loop closure
+    historyKeyframeSearchNum: 25 # 2n+1 number of history key frames will be fused into a submap for loop closure
+    historyKeyframeFitnessScore: 1.5 #the smaller the better alignment
+
+    globalMapVisualizationSearchRadius: 150.0 # key frames with in n meters will be visualized # drive 1500.0
+
+fiter_size:
+    sc_leaf: 0.5 # for Scan Context-based loop detector
+    surf_leaf: 0.3 # surface cloud
+    corner_leaf: 0.2 # corner cloud
+    outlier_leaf: 0.4 # outlier cloud
+    history_leaf: 0.3 # for history key frames of loop closure
+    surrounding_leaf: 1.0 # for surrounding key poses of scan-to-map optimization
+    globalPose_leaf: 0.1 # for global map visualization # drive 1
+    globalFrame_leaf: 0.05 # for global map visualization # drive 0.4
