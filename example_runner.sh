@@ -12,7 +12,7 @@ if [[ $mapping == 3d ]]; then
   rviz='Off'
 elif [[ $mapping == 2d ]]; then
   echo "Run 2D Grid-mapping"
-  gnome-terminal -- sh -c 'roslaunch lidar2d_mapping run.launch; exec bash'
+  gnome-terminal -- sh -c 'roslaunch ogm run.launch; exec bash'
   rviz='Off'
 else
   echo "No-mapping"

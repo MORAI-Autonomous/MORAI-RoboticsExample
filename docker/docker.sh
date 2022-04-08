@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost +
-REPO='morai/example-ad_slam'
-TAG='v1.0.0'
+REPO='morai/example'
+TAG='robotics'
 IMAGE=$(docker images | grep $TAG | awk -F' ' '{print $1}')
 if [[ -z $IMAGE ]]; then
   echo "$TAG image is not e

@@ -3,7 +3,8 @@
 import os
 import sys
 
-path = os.path.abspath(os.path.join(os.path.dirname(__file__),'/../../'))
+# path = os.path.abspath(os.path.join(os.path.dirname(__file__),'/../../'))
+path = '/root/catkin_ws/src/MORAI-EXAMPLE/AD/'
 sys.path.append(path)
 
 from network.ros_manager import RosManager
