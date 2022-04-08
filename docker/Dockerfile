@@ -17,8 +17,8 @@ RUN apt-get update \
                                                ros-melodic-velodyne libyaml-cpp-dev tmux python3-setuptools\
  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install -U numpy==1.16.6 pandas==0.24.2
-RUN pip install -U niet==1.8.2
+RUN pip3 install -U numpy==1.16.6 pandas==0.24.2 pyyaml
+RUN pip install -U niet==1.8.2 pandas==0.24.2 pyyaml
 
 WORKDIR /root
 RUN wget -O gtsam.zip https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip
