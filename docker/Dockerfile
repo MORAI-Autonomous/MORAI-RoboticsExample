@@ -35,7 +35,7 @@ RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_init_workspace'
 RUN sed -i '9c #include "lz4.h"' /usr/include/flann/util/serialization.h
 RUN sed -i '10c #include "lz4hc.h"' /usr/include/flann/util/serialization.h
 
-RUN git clone https://github.com/MORAI-Autonomous/MORAI-EXAMPLE.git
+RUN git clone -b robotics https://github.com/MORAI-Autonomous/MORAI-EXAMPLE.git
 RUN mv MORAI-EXAMPLE/example_config.yaml /root/catkin_ws/
 RUN mv MORAI-EXAMPLE/example_runner.sh /root/catkin_ws/
 

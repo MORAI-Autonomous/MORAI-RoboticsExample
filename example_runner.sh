@@ -1,7 +1,7 @@
 #!/bin/bash
 gnome-terminal -- sh -c 'roslaunch rosbridge_server rosbridge_websocket.launch; exec bash'
 sleep 2
-python3 EgoCtrl/scripts/lib/launcher.py
+python3 src/MORAI-EXAMPLE/EgoCtrl/scripts/lib/launcher.py
 
 mapping=$(niet example.mapping example_config.yaml)
 echo "Mapping mode is ${mapping} mode."
