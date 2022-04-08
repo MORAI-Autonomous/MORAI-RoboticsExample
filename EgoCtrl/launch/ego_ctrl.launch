@@ -1,0 +1,6 @@
+<launch>
+        <arg name="mode" default="none"/>
+        <node pkg="ego_ctrl" type="egp_ctrl.py" name="ego_ctrl">
+                <param name="mode" value="$(arg mode)"/> 
+        </node>
+</launch>

@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
+
+path = os.path.abspath(os.path.join(os.path.dirname(__file__),'/../../'))
+sys.path.append(path)
 
 from network.ros_manager import RosManager
 from autonomous_driving.autonomous_driving import AutonomousDriving
-
 
 def main():
     autonomous_driving = AutonomousDriving()

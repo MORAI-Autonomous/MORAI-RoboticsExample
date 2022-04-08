@@ -1,0 +1,11 @@
+setting:
+  sensor: 'example' # Preset sensor configuration
+  user_id: 'stage_morai_robotics' # User ID
+  user_pw: '0508' # User Password
+  version: 'v.4.7.220126.Robotics1' # Vesion of your MORAI Robotics
+  map: 'V_OUT_RoboCityMini01' # On other maps, it will be difficult to run the Auto-mode.
+  vehicle: 'WMR_TypeA_Model01_Micro' # With other vehicles, it will be difficult to run the Cruise-mode 
+
+example:
+  mapping: 3d  # or none, 2d # You can choose the mapping type from none(no-mapping), 2D(grid-mapping), 3D(LeGO-LOAM).
+  moving: cruise # or auto , keyboard # You can choose the moving type from Keyboard, auto(Autonomous driving algorithm), Cruise mode
