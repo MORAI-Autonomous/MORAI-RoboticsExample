@@ -2,13 +2,13 @@
 xhost +
 REPO='morai/example'
 TAG='robotics'
-IMAGE=$(docker images | grep $TAG | awk -F' ' '{print $1}')
+IMAGE=$(docker images | grep $TAG | awk -F' ' '{print $3}')
 if [[ -z $IMAGE ]]; then
   echo "$TAG image is not e
   xist. docker image build start."
-  docker build --no-cache --tag $TAG --rm "./"
+  docker pull $REPO:$TAG
 fi
-CONTAINER_ID=$(docker container ls -a | grep $TAG | awk -F' ' '{print $1}')
+CONTAINER_ID=$(docker container ls -a | grep $REPO:$TAG | awk -F' ' '{print $1}')
 if [[ -z "$CONTAINER_ID" ]]; then
   echo "$TAG docker container is not exist yet"
   docker run -it --rm -d \
@@ -21,7 +21,7 @@ if [[ -z "$CONTAINER_ID" ]]; then
             --security-opt apparmor=unconfined \
             --privileged \
             --name=$TAG \
-            $TAG bash
+            $REPO:$TAG bash
 else 
   STATE=$(docker container inspect $CONTAINER_ID | grep "Status" | tr -d "," | awk -F':' '{print $2}' | sed 's/\"//g')
   if [[ $STATE == *"exited"* ]]; then
