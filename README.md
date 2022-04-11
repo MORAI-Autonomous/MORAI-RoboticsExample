@@ -39,6 +39,10 @@ sudo apt-get install x11-xserver-utils
 
 ## Run
 ```bash
+git clone -b example --single-branch https://github.com/MORAI-Autonomous/MORAI-EXAMPLE.git
+cd MORAI-EXAMPLE
+```
+```bash
 sudo ./docker.sh
 ```
 
