@@ -4,7 +4,7 @@ tmux new -d -s rb 'roslaunch rosbridge_server rosbridge_websocket.launch; exec b
 sleep 2
 python3 src/MORAI-EXAMPLE/EgoCtrl/scripts/lib/launcher.py
 
-mapping=$(niet example.mapping example_config.yaml)
+mapping=$(niet example.mapping config.yaml)
 echo "Mapping mode is ${mapping} mode."
 mapping=${mapping,,}
 if [[ $mapping == 3d ]]; then
@@ -20,7 +20,7 @@ else
   rviz='On'
 fi
 
-moving=$(niet example.moving example_config.yaml)
+moving=$(niet example.moving config.yaml)
 echo "Moving mode is ${moving} mode."
 moving=${moving,,}
 if [[ $moving == cruise ]]; then
