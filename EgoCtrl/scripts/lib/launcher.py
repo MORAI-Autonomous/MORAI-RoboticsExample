@@ -11,7 +11,7 @@ sys.path.append(os.path.normpath(os.path.join(current_path, '../')))
 from lib.define import *
 from lib.controller import *
 
-with open('example_config.yaml') as f:
+with open('config.yaml') as f:
     config = yaml.safe_load(f)
 sensor_file = config['setting']['sensor']
 user_id = config['setting']['user_id']

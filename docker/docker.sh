@@ -6,9 +6,9 @@ IMAGE=$(docker images | grep $TAG | awk -F' ' '{print $1}')
 if [[ -z $IMAGE ]]; then
   echo "$TAG image is not e
   xist. docker image build start."
-  docker build --no-cache --tag $REPO:$TAG --rm "./"
+  docker build --no-cache --tag $TAG --rm "./"
 fi
-CONTAINER_ID=$(docker container ls -a | grep $IMAGE | awk -F' ' '{print $1}')
+CONTAINER_ID=$(docker container ls -a | grep $TAG | awk -F' ' '{print $1}')
 if [[ -z "$CONTAINER_ID" ]]; then
   echo "$TAG docker container is not exist yet"
   docker run -it --rm -d \
@@ -21,7 +21,7 @@ if [[ -z "$CONTAINER_ID" ]]; then
             --security-opt apparmor=unconfined \
             --privileged \
             --name=$TAG \
-            $REPO:$TAG
+            $TAG bash
 else 
   STATE=$(docker container inspect $CONTAINER_ID | grep "Status" | tr -d "," | awk -F':' '{print $2}' | sed 's/\"//g')
   if [[ $STATE == *"exited"* ]]; then
