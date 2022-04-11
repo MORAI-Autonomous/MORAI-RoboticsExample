@@ -20,7 +20,7 @@ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
             sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
             sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-### Install the nivida-docker2 packages
+### Install the nvida-docker2 packages
 ```bash
 sudo apt-get update
 ```
