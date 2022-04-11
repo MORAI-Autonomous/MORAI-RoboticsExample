@@ -4,8 +4,7 @@ REPO='morai/example'
 TAG='robotics'
 IMAGE=$(docker images | grep $TAG | awk -F' ' '{print $3}')
 if [[ -z $IMAGE ]]; then
-  echo "$TAG image is not e
-  xist. docker image build start."
+  echo "$TAG image is not exist. docker image build start."
   docker pull $REPO:$TAG
 fi
 CONTAINER_ID=$(docker container ls -a | grep $REPO:$TAG | awk -F' ' '{print $1}')
