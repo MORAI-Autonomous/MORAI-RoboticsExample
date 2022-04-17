@@ -2,6 +2,7 @@
 ### Clone example branch 
 ```bash
 git clone -b example --single-branch https://github.com/MORAI-Autonomous/MORAI-EXAMPLE.git
+cd MORAI-EXAMPLE
 ```
 
 ## Install [Docker](https://docs.docker.com/engine/install/ubuntu/) & [NVIDIA-Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
