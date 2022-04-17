@@ -1,10 +1,10 @@
 <launch>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lidar2d_mapping)/rviz/rviz.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ogm)/rviz/rviz.rviz"/>
     
-    <node name="tf_pub" pkg="lidar2d_mapping" type="tf_publisher.py"/>
-    <node name="mapping" pkg="lidar2d_mapping" type="grid_mapping.py" output="screen">
-        <rosparam command="load" file="$(find lidar2d_mapping)/config/config.yaml" />
+    <node name="tf_pub" pkg="ogm" type="tf_publisher.py"/>
+    <node name="mapping" pkg="ogm" type="grid_mapping.py" output="screen">
+        <rosparam command="load" file="$(find ogm)/config/config.yaml" />
     </node>
 
 </launch>
