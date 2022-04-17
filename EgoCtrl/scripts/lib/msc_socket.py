@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 # -*- Encoding: utf-8 -*-
 from lib.udp_parser import udp_parser, udp_sender
+import yaml
 
-receive_user_ip = '127.0.0.1'
-receive_user_port = 10329
-request_dst_ip = '127.0.0.1'
-request_dst_port = 10509
+with open('config.yaml') as f:
+    config = yaml.safe_load(f)
+
+receive_user_ip = config['setting']['host_ip']
+receive_user_port = config['setting']['host_port']
+request_dst_ip = config['setting']['dst_ip']
+request_dst_port = config['setting']['dst_port']
 
 class msc_socket:
     def __init__(self):

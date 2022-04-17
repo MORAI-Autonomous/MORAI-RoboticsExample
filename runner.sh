@@ -1,6 +1,7 @@
 #!/bin/bash
 gedit ./config.yaml
-tmux new -d -s rb 'roslaunch rosbridge_server rosbridge_websocket.launch; exec bash'
+source ~/catkin_ws/devel/setup.bash
+tmux new -d -s rb 'source ~/catkin_ws/devel/setup.bash && roslaunch rosbridge_server rosbridge_websocket.launch; exec bash'
 sleep 2
 python3 src/MORAI-EXAMPLE/EgoCtrl/scripts/lib/launcher.py
 
@@ -9,11 +10,11 @@ echo "Mapping mode is ${mapping} mode."
 mapping=${mapping,,}
 if [[ $mapping == 3d ]]; then
   echo "Run LeGO-LOAM"
-  tmux new -d -s loam 'roslaunch lego_loam run.launch; exec bash'
+  tmux new -d -s loam 'source ~/catkin_ws/devel/setup.bash && roslaunch lego_loam run.launch; exec bash'
   rviz='Off'
 elif [[ $mapping == 2d ]]; then
   echo "Run 2D Grid-mapping"
-  tmux new -d -s ogm 'roslaunch ogm run.launch; exec bash'
+  tmux new -d -s ogm 'source ~/catkin_ws/devel/setup.bash && roslaunch ogm run.launch; exec bash'
   rviz='Off'
 else
   echo "No-mapping"
@@ -28,7 +29,7 @@ if [[ $moving == cruise ]]; then
 elif [[ $moving == auto ]]; then
   roslaunch ego_ctrl ego_ctrl.launch mode:=$moving
   sleep 2
-  tmux new -d -s auto "roslaunch morai_standard morai_standard.launch rviz:=$rviz; exec bash"
+  tmux new -d -s auto "source ~/catkin_ws/devel/setup.bash && roslaunch morai_standard morai_standard.launch rviz:=$rviz; exec bash"
   
 else
   roslaunch ego_ctrl ego_ctrl.launch mode:=$moving

@@ -1,11 +1,19 @@
 setting:
-  sensor: 'example' # Preset sensor configuration
+  ########### Network setting ############
+  host_ip : '127.0.0.1'
+  host_port : 10329
+  dst_ip : '127.0.0.1'
+  dst_port : 10509
+  ########### User setting ############
   user_id: 'stage_morai_robotics' # User ID
   user_pw: '0508' # User Password
   version: 'v.4.7.220126.Robotics1' # Vesion of your MORAI Robotics
+  ########### Scenario setting ############
   map: 'V_OUT_RoboCityMini01' # On other maps, it will be difficult to run the Auto-mode.
   vehicle: 'WMR_TypeA_Model01_Micro' # With other vehicles, it will be difficult to run the Cruise-mode 
+  sensor: 'example' # Preset sensor configuration
 
 example:
+  ########### Example setting ############
   mapping: 3d  # or none, 2d # You can choose the mapping type from none(no-mapping), 2D(grid-mapping), 3D(LeGO-LOAM).
   moving: cruise # or auto , keyboard # You can choose the moving type from Keyboard, auto(Autonomous driving algorithm), Cruise mode
