@@ -5,8 +5,8 @@ setting:
   dst_ip : '127.0.0.1'
   dst_port : 10509
   ########### User setting ############
-  user_id: 'stage_morai_robotics' # User ID
-  user_pw: '0508' # User Password
+  user_id: '' # User ID
+  user_pw: '' # User Password
   version: 'v.4.7.220126.Robotics1' # Vesion of your MORAI Robotics
   ########### Scenario setting ############
   map: 'V_OUT_RoboCityMini01' # On other maps, it will be difficult to run the Auto-mode.
