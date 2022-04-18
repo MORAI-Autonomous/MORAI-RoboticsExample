@@ -15,6 +15,7 @@ sudo bash docker-install.sh
 `MORAI-EXAMPLE` supports to setup conditions automatically, but `MORAI-SIM` needs to be installed and be running at least until the login screen.
 
 <img src = "https://user-images.githubusercontent.com/93243768/163738426-3b31375a-838e-4a1c-b97d-fc6993d67262.png" width="60%" align="center">
+
 #### On host:
 ```bash
 sudo bash docker-run.sh
