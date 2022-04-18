@@ -6,6 +6,7 @@ cd MORAI-EXAMPLE
 ```
 
 ## Install [Docker](https://docs.docker.com/engine/install/ubuntu/) & [NVIDIA-Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+![image](https://user-images.githubusercontent.com/93243768/163738426-3b31375a-838e-4a1c-b97d-fc6993d67262.png)
 ```bash
 sudo bash docker-install.sh
 ```
