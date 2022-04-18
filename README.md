@@ -11,6 +11,8 @@ sudo bash docker-install.sh
 ```
 
 ## Run
+`MORAI-EXAMPLE` supports to setup conditions automatically, but `MORAI-SIM` needs to be installed and be running at least until the login screen. 
+
 #### On host:
 ```bash
 sudo bash docker-run.sh
@@ -20,6 +22,9 @@ sudo bash docker-run.sh
 ```bash
 sudo ./runner.sh
 ```
+Edit and close `config.yaml` to set the below parameters (only support parameters in `example`)
+1. `mapping` -> set mapping type from `2d` or `3d` or `none`
+2. `moving` -> set moving type from `auto` or `cruise` or `keyboard` 
 
 ## Clean Docker image
 ```bash
