@@ -23,8 +23,8 @@ sudo bash docker-run.sh
 sudo ./runner.sh
 ```
 Edit and close `config.yaml` to set the below parameters (only support parameters in `example`)
-1. `mapping` -> set mapping type from `2d` or `3d` or `none`
-2. `moving` -> set moving type from `auto` or `cruise` or `keyboard` 
+1. `mapping` -> set mapping type from (`2d` , `3d` , `none`)
+2. `moving` -> set moving type from (`auto` , `cruise` , `keyboard`) 
 
 ## Clean Docker image
 ```bash
