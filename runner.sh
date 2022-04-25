@@ -9,12 +9,12 @@ mapping=$(niet example.mapping config.yaml)
 echo "Mapping mode is ${mapping} mode."
 mapping=${mapping,,}
 if [[ $mapping == 3d ]]; then
-  echo "Run LeGO-LOAM"
+  echo "Run 3D SLAM (LeGO-LOAM)"
   tmux new -d -s loam 'source ~/catkin_ws/devel/setup.bash && roslaunch lego_loam run.launch; exec bash'
   rviz='Off'
 elif [[ $mapping == 2d ]]; then
-  echo "Run 2D Grid-mapping"
-  tmux new -d -s ogm 'source ~/catkin_ws/devel/setup.bash && roslaunch ogm run.launch; exec bash'
+  echo "Run 2D SLAM (Google Cartographer)"
+  tmux new -d -s ogm 'source ~/catkin_ws/devel/setup.bash && roslaunch ogm_cartographer run.launch; exec bash'
   rviz='Off'
 else
   echo "No-mapping"
