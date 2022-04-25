@@ -5,7 +5,7 @@
         "wheelbase": 0.353
     },
     "map": {
-        "name": "RoboCityMini01",
+        "name": "V_OUT_RoboCityMini01",
         "traffic_light_control": false,
         "is_closed_path": false,
         "local_path_size": 50,

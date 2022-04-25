@@ -4,10 +4,8 @@ import os
 import sys
 import rospkg
 
-# path = os.path.abspath(os.path.join(os.path.dirname(__file__),'/../../'))
-path = '/root/catkin_ws/src/MORAI-RoboticsExample/AD/'
-# rospack=rospkg.RosPack()
-# pkg_path=rospack.get_path('morai_standard')
+rospack=rospkg.RosPack()
+path = os.path.dirname(rospack.get_path('morai_standard'))
 sys.path.append(path)
 
 from network.ros_manager import RosManager
