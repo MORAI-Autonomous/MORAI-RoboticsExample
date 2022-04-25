@@ -66,6 +66,7 @@ $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
 ```
 
 ## Docker
+Easy to use [see](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker)
 ```
 $ git clone -b docker --single-branch https://github.com/MORAI-Autonomous/MORAI-RoboticsExample.git
 $ cd MORAI-RoboticsExample
