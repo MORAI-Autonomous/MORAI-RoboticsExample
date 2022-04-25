@@ -17,7 +17,7 @@ RUN apt-get update \
                                                ros-melodic-velodyne libyaml-cpp-dev tmux python3-setuptools\
  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U pyyaml
+RUN pip3 install -U pyyaml
 RUN pip install -U niet==1.8.2 pandas==0.24.2
 
 WORKDIR /root
