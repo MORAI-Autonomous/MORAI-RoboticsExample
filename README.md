@@ -25,9 +25,28 @@ sudo bash docker-run.sh
 ```bash
 sudo ./runner.sh
 ```
-Edit and close `config.yaml` to set the below parameters (only support parameters in `example`)
-1. `mapping` -> set mapping type from (`2d` , `3d` , `none`)
-2. `moving` -> set moving type from (`auto` , `cruise` , `keyboard`) 
+At the first, you should write your account information to the config.yaml
+
+assume that the account is EXAMPLE_ID / EXAMPLE_PASSWD
+```
+>>> config.yaml
+...
+  ########### User setting ############
+  user_id: 'EXAMPLE_ID' # User ID
+  user_pw: 'EXAMPLE_PASSWD' # User Password
+...
+```
+Check these parameters to change the modes
+- `mapping` : set the mapping mode
+  - `3d` (default) : use the LeGO-LOAM algorithm
+  - `2d` : use the OGM-Cartographer algorithm
+  - `none` : do not process the mapping algorithm
+- `moving` : set the Ego vehicle control mode
+  - `cruise` (defualt) : use the simulator built-in auto drive mode
+  - `auto` : use the external control algorithm with ROS or UDP
+  - `keyboard` : just control with keyboard and your hands
+
+and close the config.yaml. Then, the algorithm is excuted automatically.
 
 ## Clean Docker image
 ```bash
