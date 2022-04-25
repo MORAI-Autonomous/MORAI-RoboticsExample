@@ -11,8 +11,8 @@
 │    └── udp                    # UDP interface scripts
 ├── EgoCtrl                   # Simulator control scripts to launch the SLAM examples
 ├── SLAM                      # SLAM example projects
-│    ├── LeGO-LOAM              # LeGO-LOAM based 3D SLAM example with ROS1 interface
-│    └── OGM                    # Occupancy Grid Mapping based 2D SLAM example with ROS1 interface
+│    ├── LeGO-LOAM              # LeGO-LOAM -> 3D SLAM example with ROS1 interface
+│    └── ogm_cartographer       # Cartographer -> 2D SLAM example with ROS1 interface
 ├── docker                    # Other scripts to manage the docker image
 ├── msgs                      # ROS1 message files to play examples
 ├── config.yaml               # Configure file to launch the SLAM example
@@ -25,8 +25,8 @@
   - Smart(adaptive) Cruise Control
 
 - SLAM
-  - LeGO-LOAM - multi channel lidar based 3D SLAM
-  - OGM(Occupancy Grid Map) - single channel lidar based 2D SLAM
+  - LeGO-LOAM - 3D SLAM algorithm using a multi channel LiDAR sensor
+  - OGM-Cartographer(Google Cartographer for MORAI Robotics) - 2D SLAM algorithm using a single channel LiDAR sensor
 
 # Requirement
 
@@ -114,7 +114,7 @@ assume that the account is EXAMPLE_ID / EXAMPLE_PASSWD
 Check these parameters to change the modes
 - `mapping` : set the mapping mode
   - `3d` (default) : use the LeGO-LOAM algorithm
-  - `2d` : use the OGM algorithm
+  - `2d` : use the OGM-Cartographer algorithm
   - `none` : do not process the mapping algorithm
 - `moving` : set the Ego vehicle control mode
   - `cruise` (defualt) : use the simulator built-in auto drive mode
@@ -133,5 +133,6 @@ $ ./runner.sh
 ![logon_screen](./docs/logon_screen.png)
 
 # License
-- MORAI AD / OGM License info:  [AD / OGM License](./docs/License.md)
+- MORAI AD License info:  [AD License](./docs/License.md)
+- ogm_cartographer License info:  [Cartographer License](./SLAM/ogm_cartographer/LICENSE)
 - LeGO-LOAM License info:  [LeGO-LOAM License](./SLAM/LeGO-LOAM/LICENSE)
