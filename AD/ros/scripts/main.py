@@ -4,7 +4,7 @@ import os
 import sys
 
 # path = os.path.abspath(os.path.join(os.path.dirname(__file__),'/../../'))
-path = '/root/catkin_ws/src/MORAI-EXAMPLE/AD/'
+path = '/root/catkin_ws/src/MORAI-RoboticsExample/AD/'
 sys.path.append(path)
 
 from network.ros_manager import RosManager
