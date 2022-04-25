@@ -2,22 +2,22 @@
     "common": {
         "sampling_rate": 30,
         "vehicle_length": 0.495,
-        "wheelbase": 0.3453
+        "wheelbase": 0.353
     },
     "map": {
-        "name": "V_OUT_RoboCityMini01",
-        "traffic_light_control": true,
-        "is_closed_path": true,
+        "name": "RoboCityMini01",
+        "traffic_light_control": false,
+        "is_closed_path": false,
         "local_path_size": 50,
         "use_mgeo_path" : false,
         "mgeo":{
-            "start_node" : "ND000298",
-            "end_node" : "ND000120"
+            "start_node" : "LN000025E",
+            "end_node" : "LN000025S"
         }
     },
     "planning": {
         "velocity_profile": {
-            "max_velocity": 60.0,
+            "max_velocity": 2.0,
             "road_friction": 0.15,
             "window_size": 25
         },
@@ -35,8 +35,8 @@
         },
         "pure_pursuit": {
             "lfd_gain": 0.3,
-            "min_lfd": 1,
-            "max_lfd": 3
+            "min_lfd": 0.5,
+            "max_lfd": 30
         }
     }
 }
