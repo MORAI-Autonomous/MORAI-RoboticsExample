@@ -41,10 +41,10 @@ RUN mv MORAI-RoboticsExample/runner.sh /root/catkin_ws/
 WORKDIR /root/catkin_ws
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; catkin_make -j1'
 
-WORKDIR /root/catkin_ws/src/MORAI-EXAMPLE/AD/ros/scripts
+WORKDIR /root/catkin_ws/src/MORAI-RoboticsExample/AD/ros/scripts
 RUN chmod +x *.py
 
-WORKDIR /root/catkin_ws/src/MORAI-EXAMPLE/EgoCtrl/scripts
+WORKDIR /root/catkin_ws/src/MORAI-RoboticsExample/EgoCtrl/scripts
 RUN chmod +x *.py
 
 WORKDIR /root/catkin_ws
