@@ -1,4 +1,13 @@
 #!/bin/bash
+exit_commands() {
+  tmux kill-session -t rb
+  tmux kill-session -t loam
+  tmux kill-session -t ogm
+  tmux kill-session -t auto
+  exit
+}
+
+trap 'exit_commands' SIGINT
 gedit ./config.yaml
 source ~/catkin_ws/devel/setup.bash
 tmux new -d -s rb 'source ~/catkin_ws/devel/setup.bash && roslaunch rosbridge_server rosbridge_websocket.launch; exec bash'
@@ -34,7 +43,7 @@ elif [[ $moving == auto ]]; then
 else
   roslaunch ego_ctrl ego_ctrl.launch mode:=$moving
 fi
-echo -n "Press any key to stop"
+echo -n "Press any key or Ctrl+C to stop"
 read
 roslaunch ego_ctrl ego_ctrl.launch mode:=keyboard
 echo "See you!"
