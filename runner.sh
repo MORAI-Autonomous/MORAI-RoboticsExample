@@ -3,7 +3,7 @@ gedit ./config.yaml
 source ~/catkin_ws/devel/setup.bash
 tmux new -d -s rb 'source ~/catkin_ws/devel/setup.bash && roslaunch rosbridge_server rosbridge_websocket.launch; exec bash'
 sleep 2
-python3 src/MORAI-EXAMPLE/EgoCtrl/scripts/lib/launcher.py
+python3 src/MORAI-RoboticsExample/EgoCtrl/scripts/lib/launcher.py
 
 mapping=$(niet example.mapping config.yaml)
 echo "Mapping mode is ${mapping} mode."
