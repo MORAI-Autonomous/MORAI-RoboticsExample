@@ -40,8 +40,7 @@
 
 # Installation
 
-## Native Linux Environment 
-#### only supports Trajectory following example project
+## Native Linux Environment (only supports the `trajectory following example`)
 Basically need packages
 ```
 $ sudo pip install niet
@@ -66,8 +65,7 @@ $ cd MORAI-RoboticsExample
 $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
 ```
 
-## Docker 
-#### supports all examples. [Easy to use](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker)
+## Docker (supports all examples. [Easy to use](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker))
 ```
 $ git clone -b docker --single-branch https://github.com/MORAI-Autonomous/MORAI-RoboticsExample.git
 $ cd MORAI-RoboticsExample
