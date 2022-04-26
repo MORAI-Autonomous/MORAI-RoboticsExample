@@ -46,9 +46,10 @@ Check these parameters to change the modes
   - `auto` : use the external control algorithm with ROS or UDP
   - `keyboard` : just control with keyboard and your hands
 
-and close the config.yaml. Then, the algorithm is excuted automatically.
+and close the config.yaml. Then, the algorithm will be excuted automatically.
 
 ## Clean Docker image
+Just excute the below command, if you want to clean the docker image built (not docker).  
 ```bash
 sudo bash docker-clean.sh
 ```
