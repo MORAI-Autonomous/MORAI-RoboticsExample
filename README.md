@@ -2,7 +2,9 @@
 ===
 # MORAI - Robotics example
 
- MORAI Sim: Robotics
+First step to enjoy the `MORAI Sim: Robotics`
+
+This example support Ubuntu 18.04 or later
 ```
 ./
 ├── AD                        # [Autonomous Drive] Trajectory following example project
@@ -10,7 +12,7 @@
 │    ├── ros                    # ROS1 interface scripts
 │    └── udp                    # UDP interface scripts
 ├── EgoCtrl                   # Simulator control scripts to launch the SLAM examples
-├── SLAM                      # SLAM example projects
+├── SLAM                      # SLAM example projects (can use Docker only)
 │    ├── LeGO-LOAM              # LeGO-LOAM -> 3D SLAM example with ROS1 interface
 │    └── ogm_cartographer       # Cartographer -> 2D SLAM example with ROS1 interface
 ├── docker                    # Other scripts to manage the docker image
@@ -41,7 +43,7 @@
 # Installation
 
 ## Native Linux Environment 
-#### (only supports the `trajectory following example`)
+#### (only supports the `Autonomous Drive example`)
 Basically need packages
 ```
 $ sudo pip install niet
@@ -52,6 +54,8 @@ $ sudo apt install tmux
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/src && catkin_init_workspace
 $ git clone https://github.com/MORAI-Autonomous/MORAI-RoboticsExample.git
+$ touch MORAI-RoboticsExample/SLAM/LeGO-LOAM/CATKIN_IGNORE
+$ touch MORAI-RoboticsExample/SLAM/ogm_cartographer/CATKIN_IGNORE
 $ cd ~/catkin_ws
 $ rosdep install --from-paths . --ignore-src -r -y
 $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
