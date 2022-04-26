@@ -141,7 +141,7 @@ $ ./runner.sh
 - LeGO-LOAM License info:  [LeGO-LOAM License](./SLAM/LeGO-LOAM/LICENSE)
 
 # Cite SC-LeGO-LOAM
-In repository, the LeGO-LOAM code is modified from [SC-LeGO-LOAM](https://github.com/irapkaist/SC-LeGO-LOAM) which is an extended version of LeGO-LOAM integrated with [Scan Context++](https://github.com/irapkaist/scancontext).
+In repository, the [LeGO-LOAM](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/main/SLAM/LeGO-LOAM) code is modified from [SC-LeGO-LOAM](https://github.com/irapkaist/SC-LeGO-LOAM) which is an extended version of LeGO-LOAM integrated with [Scan Context++](https://github.com/irapkaist/scancontext).
 ```@INPROCEEDINGS { gkim-2018-iros,
   author = {Kim, Giseop and Kim, Ayoung},
   title = { Scan Context: Egocentric Spatial Descriptor for Place Recognition within {3D} Point Cloud Map },
