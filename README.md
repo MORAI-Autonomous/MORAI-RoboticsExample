@@ -71,16 +71,18 @@ $ find -name 'requirements.txt' | xargs -L 1 sudo pip install -U -r
 ```
 
 ## Docker 
-#### (supports all examples. [Easy to use](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker))
+
+#### (supports all examples. [Reference](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker#clone-example-branch))
 ```
 $ git clone -b docker --single-branch https://github.com/MORAI-Autonomous/MORAI-RoboticsExample.git
 $ cd MORAI-RoboticsExample
-$ sudo ./docker-install.sh
+$ sudo bash ./docker-install.sh
 ```
 
 # Usage
+## Native Linux Environment
 
-## AD with ROS
+### AD with ROS
 Follow this step if you want to change the trajectory.
 ```
 $ roslaunch morai_standard path_maker.launch
@@ -91,7 +93,7 @@ Enjoy the example which follow the trajectory with smart cruise control.
 $ roslaunch morai_standard morai_standard.launch
 ```
 
-## AD with UDP
+### AD with UDP
 ```
 $ cd AD/udp
 ```
@@ -105,39 +107,8 @@ Enjoy the example which follow the trajectory with smart cruise control.
 $ python3 ./main.py
 ```
 
-## SLAM with ROS
-##### [Easy to use](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker)
-At the first, you should write your account information to the config.yaml
-
-assume that the account is EXAMPLE_ID / EXAMPLE_PASSWD
-```
->>> config.yaml
-...
-  ########### User setting ############
-  user_id: 'EXAMPLE_ID' # User ID
-  user_pw: 'EXAMPLE_PASSWD' # User Password
-...
-```
-Check these parameters to change the modes
-- `mapping` : set the mapping mode
-  - `3d` (default) : use the LeGO-LOAM algorithm
-  - `2d` : use the OGM-Cartographer algorithm
-  - `none` : do not process the mapping algorithm
-- `moving` : set the Ego vehicle control mode
-  - `cruise` (defualt) : use the simulator built-in auto drive mode
-  - `auto` : use the external control algorithm with ROS or UDP
-  - `keyboard` : just control with keyboard and your hands
-
-and then, excute the runner.sh
-```
-$ ./runner.sh
-```
-
 ## Docker
-##### [Easy to use](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker)
-### launch
-`MORAI-RoboticsExample` supports to setup conditions automatically, but `MORAI-SIM` needs to be installed and be running at least until the login screen, which is shown below.
-![logon_screen](./docs/logon_screen.png)
+Just follow the [Easy to use - Run](https://github.com/MORAI-Autonomous/MORAI-RoboticsExample/tree/docker#run) guide.
 
 # License
 - MORAI AD License info:  [AD License](./docs/License.md)
