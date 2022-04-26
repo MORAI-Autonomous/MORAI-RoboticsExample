@@ -149,7 +149,8 @@ In repository, the LeGO-LOAM code is modified from [SC-LeGO-LOAM](https://github
   year = { 2018 },
   month = { Oct. },
   address = { Madrid }
-}```
+}
+```
 ```@inproceedings{legoloam2018,
   title={LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on Variable Terrain},
   author={Shan, Tixiao and Englot, Brendan},
@@ -157,4 +158,5 @@ In repository, the LeGO-LOAM code is modified from [SC-LeGO-LOAM](https://github
   pages={4758-4765},
   year={2018},
   organization={IEEE}
-}```
+}
+```
