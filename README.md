@@ -139,3 +139,22 @@ $ ./runner.sh
 - MORAI AD License info:  [AD License](./docs/License.md)
 - ogm_cartographer License info:  [Cartographer License](./SLAM/ogm_cartographer/LICENSE)
 - LeGO-LOAM License info:  [LeGO-LOAM License](./SLAM/LeGO-LOAM/LICENSE)
+
+# Cite SC-LeGO-LOAM
+In repository, the LeGO-LOAM code is modified from [SC-LeGO-LOAM](https://github.com/irapkaist/SC-LeGO-LOAM) which is an extended version of LeGO-LOAM integrated with [Scan Context++](https://github.com/irapkaist/scancontext).
+```@INPROCEEDINGS { gkim-2018-iros,
+  author = {Kim, Giseop and Kim, Ayoung},
+  title = { Scan Context: Egocentric Spatial Descriptor for Place Recognition within {3D} Point Cloud Map },
+  booktitle = { Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems },
+  year = { 2018 },
+  month = { Oct. },
+  address = { Madrid }
+}```
+```@inproceedings{legoloam2018,
+  title={LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on Variable Terrain},
+  author={Shan, Tixiao and Englot, Brendan},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={4758-4765},
+  year={2018},
+  organization={IEEE}
+}```
