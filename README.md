@@ -53,3 +53,4 @@ Just excute the below command, if you want to clean the docker image built (not 
 ```bash
 sudo bash docker-clean.sh
 ```
+#### If you want to run docker, after cleaning the docker image, please refer to ‘On host’ part. (not ‘2. Install Docker’)
