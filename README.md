@@ -4,7 +4,7 @@
 
 First step to enjoy the `MORAI Sim: Robotics`
 
-This example support Ubuntu 18.04 or later
+This examples support Ubuntu 18.04 or later
 ```
 ./
 ├── AD                        # [Autonomous Drive] Trajectory following example project
