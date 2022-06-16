@@ -24,7 +24,6 @@ This example supports Ubuntu 18.04 or later
 - AD(Autonomous Drive)
   - Trajectory follower
   - ROS / UDP communication
-  - Smart(adaptive) Cruise Control
 
 - SLAM
   - LeGO-LOAM - 3D SLAM algorithm using a multi channel LiDAR sensor

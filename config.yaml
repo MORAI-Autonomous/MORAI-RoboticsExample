@@ -16,4 +16,4 @@ setting:
 example:
   ########### Example setting ############
   mapping: 3d  # or none, 2d # You can choose the mapping type from none(no-mapping), 2D(grid-mapping), 3D(LeGO-LOAM).
-  moving: cruise # or auto , keyboard # You can choose the moving type from Keyboard, auto(Autonomous driving algorithm), Cruise mode
+  moving: keyboard # or auto # You can choose the moving type from Keyboard, auto(Autonomous driving algorithm)

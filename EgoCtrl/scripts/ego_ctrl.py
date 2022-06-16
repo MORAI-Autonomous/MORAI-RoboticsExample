@@ -25,15 +25,11 @@ class EgoInitController:
             rate.sleep()
 
     def change_ctrl(self):
-        if self.mode=='auto':
+        if self.mode == 'auto':
             self.event_cmd.option = 1
             self.event_cmd.ctrl_mode = 3 # auto mode
             self.event_cmd.gear = 4 # P
-        elif self.mode=='cruise':
-            self.event_cmd.option = 1
-            self.event_cmd.ctrl_mode = 6 # cruise mode
-            self.event_cmd.gear = 4 # P
-        else:
+        elif self.mode == 'keyboard':  
             self.event_cmd.option = 1
             self.event_cmd.ctrl_mode = 1 # keyboard mode
             self.event_cmd.gear = 4 # P
