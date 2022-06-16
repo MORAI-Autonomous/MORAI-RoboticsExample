@@ -7,10 +7,10 @@ setting:
   ########### User setting ############
   user_id: '' # User ID
   user_pw: '' # User Password
-  version: 'v.4.7.220126.Robotics1' # Vesion of your MORAI Robotics
+  version: 'v.R1.220506.3' # Vesion of your MORAI Robotics
   ########### Scenario setting ############
   map: 'V_OUT_RoboCityMini01' # On other maps, it will be difficult to run the Auto-mode.
-  vehicle: 'WMR_TypeA_Model01_Micro' # With other vehicles, it will be difficult to run. 
+  vehicle: 'WMR_TypeA_Model01_Mini' # With other vehicles, it will be difficult to run. 
   sensor: 'example' # Preset sensor configuration
 
 example:
