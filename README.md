@@ -42,9 +42,8 @@ Check these parameters to change the modes
   - `2d` : use the OGM-Cartographer algorithm
   - `none` : do not process the mapping algorithm
 - `moving` : set the Ego vehicle control mode
-  - `cruise` (defualt) : use the simulator built-in auto drive mode
   - `auto` : use the external control algorithm with ROS or UDP
-  - `keyboard` : just control with keyboard and your hands
+  - `keyboard` (defualt)  : just control with keyboard and your hands
 
 and close the config.yaml. Then, the algorithm will be excuted automatically.
 
