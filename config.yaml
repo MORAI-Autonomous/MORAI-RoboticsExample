@@ -10,7 +10,7 @@ setting:
   version: 'v.4.7.220126.Robotics1' # Vesion of your MORAI Robotics
   ########### Scenario setting ############
   map: 'V_OUT_RoboCityMini01' # On other maps, it will be difficult to run the Auto-mode.
-  vehicle: 'WMR_TypeA_Model01_Micro' # With other vehicles, it will be difficult to run the Cruise-mode 
+  vehicle: 'WMR_TypeA_Model01_Micro' # With other vehicles, it will be difficult to run. 
   sensor: 'example' # Preset sensor configuration
 
 example:
